@@ -23,4 +23,16 @@ public class BacklogStepDefs {
 	    throw new PendingException();
 	}
 }
-```
+````
+If you right click on test/ngpanwei/bdd/tests/FeatureTest.java
+and select Run As --> JUnit Test, you will see the following in the console window.
+````
+2 Scenarios (1 pending, 1 passed)
+4 Steps (3 skipped, 1 pending)
+0m0.254s
+
+cucumber.api.PendingException: TODO: implement me
+	at ngpanwei.bdd.stepdefs.BacklogStepDefs.backlog_有_任务(BacklogStepDefs.java:35)
+	at ✽.Given Backlog 有 任务 "Task123"(BacklogManagement.feature:36)
+````	
+
