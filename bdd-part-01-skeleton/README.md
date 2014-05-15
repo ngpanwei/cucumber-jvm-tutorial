@@ -19,7 +19,7 @@ the kind of solution you are providing and your desired features.
 The test folder contains infrastructure code for you to run your first test, which at this moment there are none.
 Here we only have skeleton glue code in terms of [suites](test/ngpanwei/bdd/suites) and [tests](test/ngpanwei/bdd/tests).
 
-(FeatureTest.java)[test/ngpanwei/bdd/tests/FeatureTest.java] contains the JUnit test class that links requirements (*.features) files to 
+[FeatureTest.java](test/ngpanwei/bdd/tests/FeatureTest.java) contains the JUnit test class that links requirements (*.features) files to 
 test step definitions that will be stored in [ngpanwei.bdd.stepdefs](test/ngpanwei/bdd/stepdefs)
 ````java
 @RunWith(Cucumber.class)
@@ -33,6 +33,11 @@ public class FeatureTest {
 }
 ````
 
-(AllTest.java)[test/ngpanwei/bdd/suites/AllTest.java] contains JUnit test suite that is useful for running multiple FeatureTests. 
+[AllTest.java](test/ngpanwei/bdd/suites/AllTest.java) contains JUnit test suite that is useful for running multiple FeatureTests. 
 In this case we only have one.
-
+````java
+@RunWith(Suite.class)
+@SuiteClasses({ FeatureTest.class })
+public class AllTest {
+}
+````
