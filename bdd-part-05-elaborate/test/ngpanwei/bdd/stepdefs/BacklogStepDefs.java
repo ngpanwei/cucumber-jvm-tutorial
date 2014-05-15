@@ -42,12 +42,10 @@ public class BacklogStepDefs {
 	public void setup() {
 		backlog = new Backlog() ;
 	}
-	
 	@Given("^Sprint 开始日期是 (\\d+-\\d+-\\d+)$")
 	public void sprint_开始日期是(@Format("yyyy-MM-dd") Date sprintStartDate) throws Throwable {
 		System.err.println("Sprint Start Date : "+Converter.dateString(sprintStartDate)) ;
 	}	
-
 	@Given("^Backlog 有 任务:$")
 	public void backlog_有_任务(List<TaskDef> taskDefs) throws Throwable {
 		for(TaskDef taskDef : taskDefs) {
@@ -56,7 +54,6 @@ public class BacklogStepDefs {
 			assertNotNull(newTask) ;
 		}
 	}
-
 	@When("^我完成:$")
 	public void 我完成(List<TaskDef> completedTasks) throws Throwable {
 		for(TaskDef taskDef : completedTasks) {
@@ -64,7 +61,6 @@ public class BacklogStepDefs {
 			task.setName(Task.STATUS_DONE);
 		}
 	}
-	
 	@Then("^未完成任务是:$")
 	public void 未完成任务是(List<TaskDef> expectedTaskDefs) throws Throwable {
 		for(TaskDef taskDef : expectedTaskDefs) {

@@ -30,7 +30,7 @@ import java.util.Date;
 import cucumber.api.Transformer;
 
 public class Converter {
-	public static final SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy") ;
+	public static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd") ;
 	
 	public static String dateString(Date date) {
 		return format.format(date) ;
