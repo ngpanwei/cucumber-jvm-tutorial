@@ -5,7 +5,7 @@ In this part 4 of the tutorial, we write both the test code and the actual code.
 At this point, we start to have a number of files. Let's take a brief moment to recap the type of files 
 we have:
 
-![FileTypes][help/BDD-Part-04-01-FileType.png]
+![FileTypes](help/BDD-Part-04-01-FileType.png)
 - *.xmind - this is the mind map for us to work with customers to explore requirements and features
 - *.features - this is to express requirements as acceptance tests using the Gherkin language.
 - *StepDefs.java - are files that are use to map the steps in the *.feature files into test code. 
