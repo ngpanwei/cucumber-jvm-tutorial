@@ -32,6 +32,36 @@ Scenario: 有未完成任务
 Scenario: 有些任务达到某个状态
 ````
 
+If you right click on test/ngpanwei/bdd/tests/FeatureTest.java
+and select Run As --> JUnit Test, you will see the following in the console window.
+````java
+2 Scenarios (1 undefined, 1 passed)
+4 Steps (4 undefined)
+0m0.000s
+
+
+You can implement missing steps with the snippets below:
+
+@Given("^Backlog 有 任务 \"(.*?)\"$")
+public void backlog_有_任务(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@When("^我完成 \"(.*?)\"$")
+public void 我完成(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@Then("^未完成任务是 \"(.*?)\"$")
+public void 未完成任务是(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+````
+You can use the above generated code to write your first test.
+
 [TOP](https://github.com/ngpanwei/cucumber-jvm-tutorial)
 [1](https://github.com/ngpanwei/cucumber-jvm-tutorial/bdd-part-01-skeleton/README.md)
 [2](https://github.com/ngpanwei/cucumber-jvm-tutorial/bdd-part-02-features/README.md)
