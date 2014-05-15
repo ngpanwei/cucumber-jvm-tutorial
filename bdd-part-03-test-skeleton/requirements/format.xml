@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jCukeTool" default="format" basedir=".">
+	<description>
+    format feature files
+  </description>
+	<property name="home.dir" value="../" />
+	<property name="lib.dir" value="${home.dir}/lib" />
+	<property name="bin.dir" value="${home.dir}/bin" />
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+	<target name="format">
+		<java classname="ngpanwei.jCukeTool.CukeFormatter" fork="true">
+			<classpath>
+				<path refid="classpath" />
+			</classpath>
+		</java>
+	</target>
+</project>
