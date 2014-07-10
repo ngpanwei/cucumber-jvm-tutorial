@@ -16,9 +16,9 @@
 	<target name="packaging" description="packaging cucumber example">
 		<jar destfile="cucumber-initial.zip" description="Packing project">
 			<zipfileset dir="requirements" />
-			<zipfileset dir="src" excludes="**/.DS_Store" />
-			<zipfileset dir="test" excludes="**/.DS_Store" />
-			<zipfileset dir="lib" excludes="**/.DS_Store" />
+			<zipfileset dir="src" />
+			<zipfileset dir="test" />
+			<zipfileset dir="lib" />
 		</jar>
     </target>
 </project>

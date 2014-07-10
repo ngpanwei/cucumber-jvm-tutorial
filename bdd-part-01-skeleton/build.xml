@@ -15,10 +15,10 @@
 	</path>
 	<target name="packaging" description="packaging cucumber example">
 		<jar destfile="cucumber-initial.zip" description="Packing project">
-			<zipfileset dir="requirements" />
-			<zipfileset dir="src" />
-			<zipfileset dir="test" />
-			<zipfileset dir="lib" />
+			<zipfileset dir="requirements" prefix="requirements" excludes="**/.DS_Store" />
+			<zipfileset dir="src" prefix="src" excludes="**/.DS_Store" />
+			<zipfileset dir="test" prefix="test" excludes="**/.DS_Store" />
+			<zipfileset dir="lib" prefix="lib" />
 		</jar>
     </target>
 </project>
