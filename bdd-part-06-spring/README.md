@@ -1,11 +1,10 @@
-Cucumber-jvm tutorial Part 05
+Cucumber-jvm tutorial Part 06
 =============================
 
-In this Part 5 of the tutorial we go to more elaborate use of the Gherkin language to 
-express more complex step definitions.
+In this Part 6 of the tutorial we run cucumber within spring.
 
-We update 
-[BacklogManagement.feature](requirements/features/BacklogManagement.feature) as follows:
+We do the necessary spring setup with an [ApplicationContext.xml]() as part of the test infrastructure.
+[BacklogManagement.feature](test/ngpanwei/bdd/tests/ApplicationContext.xml) as follows:
 ````
 Feature: 管理任务
 	Description
