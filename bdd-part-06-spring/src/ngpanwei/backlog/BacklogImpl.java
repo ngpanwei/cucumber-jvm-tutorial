@@ -72,7 +72,7 @@ public class BacklogImpl implements IBacklogService {
 	 * @see ngpanwei.backlog.IBacklog#getUnompleteTask()
 	 */
 	@Override
-	public List<Task> getUnompleteTask() {
+	public List<Task> getUncompletedTask() {
 		List<Task> uncompletedTasks = new ArrayList<Task>() ;
 		for(Entry<String,Task> entry : taskMap.entrySet()) {
 			Task task = entry.getValue() ;
