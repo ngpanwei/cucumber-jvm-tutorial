@@ -11,7 +11,7 @@
 	     <input name='action' value='add' type='hidden' />
 		 <input name='taskName' /><input type='submit' value='add'>
 	</form>
-	<%
+	<div id='backlog'><%
 		List<Task> tasks = (List<Task>)request.getAttribute("tasks");
 	    if(tasks==null||tasks.size()<1) {
 	        %>
@@ -22,11 +22,12 @@
 				<h2>Backlog Items</h2><hr/>
 				<table><tr><td>Task Name</td><td>Status</td></tr>
 			<%
+			int i = 0 ;
 			for(Task task : tasks) {
 			%>
 				<tr>
-					<td><%=task.getName()%></td>
-					<td><%=task.getStatus()%></td>
+					<td id='task-<%=i%>'><%=task.getName()%></td>
+					<td id='taskStatus-<%=i%>'><%=task.getStatus()%></td>
 				</tr>
 			<%
 			}
@@ -34,6 +35,6 @@
 			</table>
 			<%
 		}
-	%>
+	%></div>
 </body>
 </html>

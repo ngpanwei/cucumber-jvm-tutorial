@@ -36,18 +36,28 @@ import org.springframework.test.context.ContextConfiguration;
 
 public class SimplestServer
 {
-	private static ApplicationContext appContext ;
+	protected static ApplicationContext appContext ;
+	protected static SimplestServer server = null ;
     public static void main(String[] args) throws Exception
     {
 		appContext = new ClassPathXmlApplicationContext(
 				new String[] { "ngpanwei/backlog/ApplicationContext.xml" });
-        new SimplestServer().runServer();
+		if(server==null)
+			server = new SimplestServer() ;
+        server.runServer();
     }
     public static ApplicationContext appContext() {
     	    return appContext ;
     }
 
-	private void runServer() throws Exception, InterruptedException {
+    protected String resourceBase = null ;
+    protected String descriptor = null ;
+    
+    public SimplestServer() {
+    		resourceBase = "./web" ;
+    		descriptor = "./web/WEB-INF/web.xml" ;
+    }
+	protected void runServer() throws Exception, InterruptedException {
 		Server server = new Server(8080);
 		WebAppContext webContext = getWebAppContext();
         server.setHandler(webContext); 
@@ -56,20 +66,13 @@ public class SimplestServer
 	}
 
 	private WebAppContext getWebAppContext() {
-		
 		final URL warUrl = this.getClass().getClassLoader().getResource("ngpanwei");
 		final String warUrlString = warUrl.toExternalForm();
 		final String CONTEXTPATH = "/";
 		WebAppContext context = new WebAppContext(warUrlString, CONTEXTPATH) ;
-        context.setResourceBase("./web");
-        context.setDescriptor("./web/WEB-INF/web.xml");
+        context.setResourceBase(resourceBase);
+        context.setDescriptor(descriptor);
 		
-		/*
-		WebAppContext context = new WebAppContext();
-        context.setDescriptor("./web/WEB-INF/web.xml");
-        context.setResourceBase("./web");
-        context.setContextPath("/");
-        */
         context.setParentLoaderPriority(true);
 		return context;
 	}

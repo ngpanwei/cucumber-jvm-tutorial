@@ -26,9 +26,9 @@ package ngpanwei.backlog.app.backlog;
 import java.util.List;
 
 public interface IBacklogService {
-	public abstract Task add(String taskName);
-	public abstract Task getTask(String taskName);
-	public abstract Task setTaskStatus(String taskName, String status);
-	public abstract List<Task> getUnompleteTask();
-	public abstract List<Task> getTasks();
+	public Task add(String taskName);
+	public Task getTask(String taskName);
+	public Task setTaskStatus(String taskName, String status);
+	public List<Task> getUnompleteTask();
+	public List<Task> getTasks();
 }

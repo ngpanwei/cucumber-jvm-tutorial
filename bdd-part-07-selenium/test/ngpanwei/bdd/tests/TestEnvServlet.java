@@ -21,7 +21,7 @@
   *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
   *  SOFTWARE. 
   */ 
-package ngpanwei.backlog.app.backlog;
+package ngpanwei.bdd.tests;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,36 +34,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ngpanwei.backlog.app.backlog.Backlog;
+import ngpanwei.backlog.app.backlog.IBacklogEnv;
+import ngpanwei.backlog.app.backlog.Task;
 import ngpanwei.backlog.web.SimplestServer;
 
 @SuppressWarnings("serial")
-public class BacklogServlet extends HttpServlet {
-	private IBacklogService backlog ;
+public class TestEnvServlet extends HttpServlet {
+	private IBacklogEnv backlogEnv ;
 	@Override
 	public void init(ServletConfig config)
 	          throws ServletException {
-		backlog = (Backlog)SimplestServer.appContext().getBean("backlog") ;
+		backlogEnv = (IBacklogEnv)SimplestServer.appContext().getBean("backlog") ;
 	}
 	public void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		System.err.println("Current thread: ["+Thread.currentThread()+"] "
 				+"["+this+"]") ;
-		String action = request.getParameter("action");
-		if(action!=null&&action.equals("add")) {
-			String taskName = request.getParameter("taskName");
-			if(taskName!=null&&taskName.trim().length()>0) {
-				System.err.println("Adding Task");
-				synchronized(backlog) {
-					backlog.add(taskName) ;
-				}
-			}
+		String env = request.getParameter("env");
+		if(env!=null&&env.equals("task")) {
+			backlogEnv.reset() ;
 		}
-		List<Task> tasks = null ;
-		synchronized(backlog) {
-			tasks = backlog.getTasks() ;
-		}
-	    request.setAttribute("tasks", tasks);
-	    RequestDispatcher view = request.getRequestDispatcher("/tasks.jsp");
+	    request.setAttribute("reset", env);
+	    RequestDispatcher view = request.getRequestDispatcher("/testEnv.jsp");
 	    view.forward(request, response);		
 	}
 

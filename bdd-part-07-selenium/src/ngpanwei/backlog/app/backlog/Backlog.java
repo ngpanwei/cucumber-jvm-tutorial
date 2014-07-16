@@ -31,7 +31,7 @@ import java.util.Map.Entry;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Backlog implements IBacklogService {
+public class Backlog implements IBacklogService , IBacklogEnv {
 
 	private HashMap<String,Task> taskMap ;
 	
@@ -90,6 +90,10 @@ public class Backlog implements IBacklogService {
 			taskList.add(task) ;
 		}
 		return taskList ;
+	}
+	
+	public void reset() {
+		taskMap = new HashMap<String,Task>() ;
 	}
 	
 }
