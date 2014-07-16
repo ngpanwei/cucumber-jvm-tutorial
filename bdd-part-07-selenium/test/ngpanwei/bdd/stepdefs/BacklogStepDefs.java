@@ -23,41 +23,72 @@
  */
 package ngpanwei.bdd.stepdefs;
 
-import cucumber.api.PendingException;
+import static org.junit.Assert.fail;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class BacklogStepDefs {
+	private WebDriver driver;
+	private String baseUrl;
+	private boolean acceptNextAlert = true;
+	private StringBuffer verificationErrors = new StringBuffer();
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new FirefoxDriver();
+		baseUrl = "http://localhost:8080/";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(baseUrl + "task");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		driver.quit();
+		String verificationErrorString = verificationErrors.toString();
+		if (!"".equals(verificationErrorString)) {
+			fail(verificationErrorString);
+		}
+	}
 
 	@Given("^团队有任务 \"([^\"]*)\"$")
-	public void 团队有任务(String arg1) throws Throwable {
-		// Express the Regexp above with the code you wish you had
-		throw new PendingException();
+	public void 团队有任务(String taskName) throws Throwable {
+		driver.findElement(By.name("taskName")).clear();
+		driver.findElement(By.name("taskName")).sendKeys(taskName);
+		driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 	}
 
 	@When("^团队完成 \"([^\"]*)\"$")
 	public void 团队完成(String arg1) throws Throwable {
 		// Express the Regexp above with the code you wish you had
-		throw new PendingException();
+		// throw new PendingException();
 	}
 
 	@Then("^团队的未完成任务是 \"([^\"]*)\"$")
 	public void 团队的未完成任务是(String arg1) throws Throwable {
 		// Express the Regexp above with the code you wish you had
-		throw new PendingException();
+		// throw new PendingException();
 	}
 
 	@Given("^团队有优先级 \"([^\"]*)\" 的任务 \"([^\"]*)\"$")
 	public void 团队有优先级_的任务(String arg1, String arg2) throws Throwable {
 		// Express the Regexp above with the code you wish you had
-		throw new PendingException();
+		// throw new PendingException();
 	}
 
 	@Then("^团队的未完成 \"([^\"]*)\" 优先级 任务是 \"([^\"]*)\"$")
 	public void 团队的未完成_优先级_任务是(String arg1, String arg2) throws Throwable {
 		// Express the Regexp above with the code you wish you had
-		throw new PendingException();
+		// throw new PendingException();
 	}
 
 }
