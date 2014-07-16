@@ -1,0 +1,11 @@
+<web-app>
+    <servlet>
+        <servlet-name>BacklogServlet</servlet-name>
+        <servlet-class>ngpanwei.backlog.app.backlog.BacklogServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BacklogServlet</servlet-name>
+        <url-pattern>/task/*</url-pattern>
+    </servlet-mapping>
+</web-app>

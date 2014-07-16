@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jEssence" default="runcukes" basedir=".">
+	<description>
+    jEssence build file.  This is used to package the project as a zip.
+  </description>
+	<property name="src.dir" value="src" />
+	<property name="test.dir" value="test" />
+	<property name="lib.dir" value="lib" />
+	<property name="bin.dir" value="bin" />
+	<path id="classpath">
+		<pathelement path="${src.dir}" />
+		<pathelement path="${test.dir}" />
+		<pathelement path="${bin.dir}" />
+		<fileset dir="${lib.dir}/cucumber115" includes="**/*.jar" 
+			excludes="picocontainer-2.14.3.jar" />
+		<fileset dir="${lib.dir}" includes="jetty/*.jar" />
+		<fileset dir="${lib.dir}" includes="share/*.jar" />
+		<fileset dir="${lib.dir}" includes="spring/*.jar" />
+	</path>
+	<tstamp>
+		<format property="build.time" pattern="yyyy-MM-dd-HH-mm" unit="minute" />
+	</tstamp>
+	<junit printsummary="yes" failureproperty="junit.failure">
+		<classpath>
+			<path refid="classpath" />
+		</classpath>
+		<test name="ngpanwei.tests.unit.UnitTests" 
+			haltonfailure="no" outfile="result">
+			<formatter type="plain" />
+			<formatter type="xml" />
+		</test>
+	</junit>
+	<target name="run-unit-tests">
+		<mkdir dir="target/cucumber-junit-report" />
+		<java classname="ngpanwei.tests.unit.UnitTests" fork="true" failonerror="false" resultproperty="cucumber.exitstatus">
+			<classpath>
+				<path refid="classpath" />
+			</classpath>
+		</java>
+	</target>	
+	<target name="runcukes">
+		<mkdir dir="target/cucumber-junit-report" />
+		<java classname="cucumber.api.cli.Main" fork="true" failonerror="false" resultproperty="cucumber.exitstatus">
+			<classpath>
+				<path refid="classpath" />
+			</classpath>
+			<arg value="--format" />
+			<arg value="junit:target/cucumber-junit-report/allcukes.xml" />
+			<arg value="--format" />
+			<arg value="pretty" />
+			<arg value="--monochrome" />
+			<arg value="true" />
+			<arg value="--tags" />
+			<arg value="@Sample" />
+			<arg value="--format" />
+			<arg value="html:target/cucumber-html-report" />
+			<arg value="--glue" />
+			<arg value="ngpanwei.tests.unit" />
+			<arg value="test/ngpanwei/features/login" />
+		</java>
+		<!--
+		<junitreport todir="target/cucumber-junit-report">
+			<fileset dir="target/cucumber-junit-report">
+				<include name="allcukes.xml" />
+			</fileset>
+			<report format="frames" todir="target/cucumber-junit-report" />
+		</junitreport>
+		<fail message="Cucumber failed">
+			<condition>
+				<not>
+					<equals arg1="${cucumber.exitstatus}" arg2="0" />
+				</not>
+			</condition>
+		</fail>
+-->
+	</target>
+</project>
