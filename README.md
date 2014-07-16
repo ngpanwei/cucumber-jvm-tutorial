@@ -10,4 +10,4 @@ This tutorial comprises the following steps
 * [Step 4](https://github.com/ngpanwei/cucumber-jvm-tutorial/blob/master/bdd-part-04-test-code/README.md) We implement the test definitions and evolve our code API until the test case passes.
 * [Step 5](https://github.com/ngpanwei/cucumber-jvm-tutorial/blob/master/bdd-part-05-elaborate/README.md) We elaborate the requirements to support more sophisticated test cases. Here we learn more sophisticated use of the BDD Gherkin language.
 * [Step 6] (https://github.com/ngpanwei/cucumber-jvm-tutorial/blob/master/bdd-part-06-spring/README.md) Let's move the codes to spring and run cucumber within spring.
-
+* [Step 7](https://github.com/ngpanwei/cucumber-jvm-tutorial/blob/master/bdd-part-07-selenium/README.md) Let's run the codes in a web container and do BDD over the browser through Selenium IDE.
