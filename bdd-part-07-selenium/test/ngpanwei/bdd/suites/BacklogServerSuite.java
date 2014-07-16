@@ -23,13 +23,15 @@
  */
 package ngpanwei.bdd.suites;
 
-import ngpanwei.bdd.tests.FeatureTest;
+import ngpanwei.bdd.tests.BacklogFeatureTest;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ FeatureTest.class })
-public class AllTest {
+@SuiteClasses({ ServerStarter.class, 
+				BacklogFeatureTest.class, 
+				BacklogUICleaner.class })
+public class BacklogServerSuite {
 }

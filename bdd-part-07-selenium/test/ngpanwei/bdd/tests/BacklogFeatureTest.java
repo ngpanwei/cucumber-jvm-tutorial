@@ -35,7 +35,7 @@ import cucumber.api.junit.Cucumber;
 		glue = "ngpanwei.bdd.stepdefs" ,
 		tags = { "~@Undefined"  } 
 		)
-public class FeatureTest {
+public class BacklogFeatureTest {
 }
 
 
