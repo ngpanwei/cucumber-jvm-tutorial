@@ -26,14 +26,9 @@ public class SeleniumBacklogTest {
   public void testSeleniumBacklog() throws Exception {
     driver.get(baseUrl + "/task");
     driver.findElement(By.name("taskName")).clear();
-    driver.findElement(By.name("taskName")).sendKeys("TaskABC");
+    driver.findElement(By.name("taskName")).sendKeys("ddd");
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    driver.findElement(By.name("taskName")).clear();
-    driver.findElement(By.name("taskName")).sendKeys("TaskDEF");
-    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    driver.findElement(By.name("taskName")).clear();
-    driver.findElement(By.name("taskName")).sendKeys("Task123");
-    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+    assertTrue(isElementPresent(By.id("task-0")));
   }
 
   @After

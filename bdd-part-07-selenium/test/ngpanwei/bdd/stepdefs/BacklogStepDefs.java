@@ -23,12 +23,14 @@
  */
 package ngpanwei.bdd.stepdefs;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.concurrent.TimeUnit;
 
+import ngpanwei.bdd.web.BaseUIStepDefs;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
@@ -37,8 +39,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class BacklogStepDefs {
-	private WebDriver driver;
+public class BacklogStepDefs extends BaseUIStepDefs {
 	private String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -65,10 +66,11 @@ public class BacklogStepDefs {
 		driver.findElement(By.name("taskName")).clear();
 		driver.findElement(By.name("taskName")).sendKeys(taskName);
 		driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+	    assertTrue(isElementPresent(By.id("task-0")));
 	}
 
 	@When("^团队完成 \"([^\"]*)\"$")
-	public void 团队完成(String arg1) throws Throwable {
+	public void 团队完成(String taskName) throws Throwable {
 		// Express the Regexp above with the code you wish you had
 		// throw new PendingException();
 	}
