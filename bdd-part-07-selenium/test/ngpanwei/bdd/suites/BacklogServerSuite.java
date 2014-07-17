@@ -23,15 +23,22 @@
  */
 package ngpanwei.bdd.suites;
 
-import ngpanwei.bdd.tests.BacklogFeatureTest;
+import ngpanwei.bdd.setup.BacklogUIBasedCleaner;
+import ngpanwei.bdd.setup.ServerStarter;
+import ngpanwei.bdd.tests.BacklogUIFeatureTest;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * This suite starts the web server, runs web-based tests and 
+ * cleans the database via a web-based cleaner.
+ * @author ngpanwei
+ */
 @RunWith(Suite.class)
 @SuiteClasses({ ServerStarter.class, 
-				BacklogFeatureTest.class, 
-				BacklogUICleaner.class })
+				BacklogUIFeatureTest.class, 
+				BacklogUIBasedCleaner.class })
 public class BacklogServerSuite {
 }

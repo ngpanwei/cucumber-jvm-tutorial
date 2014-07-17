@@ -21,7 +21,7 @@
   *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
   *  SOFTWARE. 
   */ 
-package ngpanwei.bdd.tests;
+package ngpanwei.bdd.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,6 +39,10 @@ import ngpanwei.backlog.app.backlog.IBacklogEnv;
 import ngpanwei.backlog.app.backlog.Task;
 import ngpanwei.backlog.web.SimplestServer;
 
+/**
+ * This servlet provides functionality to reset the database via servlet calls.
+ * @author ngpanwei
+ */
 @SuppressWarnings("serial")
 public class TestEnvServlet extends HttpServlet {
 	private IBacklogEnv backlogEnv ;

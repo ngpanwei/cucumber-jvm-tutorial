@@ -5,7 +5,7 @@
     </servlet>
     <servlet>
         <servlet-name>TestEnvServlet</servlet-name>
-        <servlet-class>ngpanwei.bdd.tests.TestEnvServlet</servlet-class>
+        <servlet-class>ngpanwei.bdd.web.TestEnvServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

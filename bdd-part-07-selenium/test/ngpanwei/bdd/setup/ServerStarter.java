@@ -21,21 +21,19 @@
  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
  *  SOFTWARE. 
  */
-package ngpanwei.bdd.tests;
+package ngpanwei.bdd.setup;
 
-import org.junit.runner.RunWith;
+import ngpanwei.backlog.web.SimplestServer;
+import ngpanwei.bdd.web.BacklogTestServer;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import org.junit.Test;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-		monochrome = true, 
-		features = "requirements/features" ,
-		glue = "ngpanwei.bdd.stepdefs" ,
-		tags = { "~@Undefined"  } 
-		)
-public class BacklogFeatureTest {
+public class ServerStarter {
+	@Test
+	public void startServer() throws Exception {
+		BacklogTestServer server = new BacklogTestServer() ;
+		server.isService = false ;
+		SimplestServer.setServer(server) ;
+		SimplestServer.main(null);
+	}
 }
-
-

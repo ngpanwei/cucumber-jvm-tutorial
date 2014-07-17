@@ -21,22 +21,25 @@
  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
  *  SOFTWARE. 
  */
-package ngpanwei.bdd.suites;
-
-import ngpanwei.bdd.setup.BacklogUIBasedCleaner;
-import ngpanwei.bdd.tests.BacklogUIFeatureTest;
+package ngpanwei.bdd.tests;
 
 import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 
 /**
- * This suite tests the feature via web UI with Selenium web driver
- * and clean the database through the web testability interface.
+ * Test the associated *.feature definitions.
  * @author ngpanwei
  */
-@RunWith(Suite.class)
-@SuiteClasses({ BacklogUIFeatureTest.class, 
-				BacklogUIBasedCleaner.class })
-public class BacklogUISuite {
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		monochrome = true, 
+		features = "requirements/features" ,
+		glue = "ngpanwei.bdd.stepdefs" ,
+		tags = { "~@Undefined"  } 
+		)
+public class BacklogUIFeatureTest {
 }
+
+

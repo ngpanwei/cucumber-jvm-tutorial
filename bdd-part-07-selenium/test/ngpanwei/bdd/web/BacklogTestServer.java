@@ -21,22 +21,21 @@
  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
  *  SOFTWARE. 
  */
-package ngpanwei.bdd.suites;
+package ngpanwei.bdd.web;
 
-import ngpanwei.bdd.setup.BacklogUIBasedCleaner;
-import ngpanwei.bdd.tests.BacklogUIFeatureTest;
-
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
+import ngpanwei.backlog.web.SimplestServer;
 
 /**
- * This suite tests the feature via web UI with Selenium web driver
- * and clean the database through the web testability interface.
+ * This server has additional servlets for improved testability.
+ * These additional servlets do not run in production.
  * @author ngpanwei
  */
-@RunWith(Suite.class)
-@SuiteClasses({ BacklogUIFeatureTest.class, 
-				BacklogUIBasedCleaner.class })
-public class BacklogUISuite {
+public class BacklogTestServer extends SimplestServer {
+    public static void main(String[] args) throws Exception {
+    		SimplestServer.setServer(new BacklogTestServer()) ;
+    		SimplestServer.main(args);
+    }
+	public BacklogTestServer() {
+		descriptor = "./web/WEB-INF/backlog-web.xml" ;
+	}
 }

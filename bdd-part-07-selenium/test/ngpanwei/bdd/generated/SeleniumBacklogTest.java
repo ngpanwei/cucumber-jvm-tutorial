@@ -1,4 +1,4 @@
-package ngpanwei.bdd.tests;
+package ngpanwei.bdd.generated;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
