@@ -23,18 +23,23 @@
   */ 
 package ngpanwei.bdd.stepdefs;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+
 import java.util.Date;
 import java.util.List;
 
 import ngpanwei.backlog.Backlog;
 import ngpanwei.backlog.Task;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
 import cucumber.api.Format;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
-import static org.junit.Assert.* ;
 
 public class BacklogStepDefs {
 	Backlog backlog = null ;
@@ -59,6 +64,12 @@ public class BacklogStepDefs {
 			assertNotNull(newTask) ;
 		}
 	}
+	@Given("^任务的内容是$")
+	public void 任务_的内容是(String taskDetailDef) throws Throwable {
+		JSONObject taskDetail = (JSONObject)JSONValue.parse(taskDetailDef) ;
+		System.err.println((String)taskDetail.get("detail")) ;
+	}
+	
 	@When("^我完成:$")
 	public void 我完成(List<TaskDef> completedTasks) 
 				throws Throwable {

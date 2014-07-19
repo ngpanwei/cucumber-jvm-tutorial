@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="lib/picocontainer-2.14.3.jar"/>
 	<classpathentry kind="lib" path="lib/jCukeTool.jar"/>
 	<classpathentry kind="lib" path="lib/org.xmind.core_3.4.1.201401221918.jar"/>
+	<classpathentry kind="lib" path="lib/json/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

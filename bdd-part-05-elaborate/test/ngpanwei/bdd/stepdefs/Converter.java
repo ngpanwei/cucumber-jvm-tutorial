@@ -27,6 +27,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
 import cucumber.api.Transformer;
 
 public class Converter {
@@ -48,6 +51,14 @@ public class Converter {
 			return date;
 		}
 	}
+	public class JSONConverter extends Transformer<JSONObject> {
+		@Override
+		public JSONObject transform(String value) {
+			JSONObject obj = null ;
+			obj = (JSONObject)JSONValue.parse(value) ;
+			return obj ;
+		}
+	}	
 }
 
 

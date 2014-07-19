@@ -37,6 +37,15 @@ Scenario: 有未完成任务
 	    | name    | status |
 		| Task123 | TODO   |
 		| TaskAB  | TODO   |
+	And 任务的内容是
+	"""
+	   { "detail" : "作为消费者，我要快速商品计算总价" ,
+	     "comments" : [
+	         { "line" : "应该可选不同货币" } ,
+	         { "line" : "总价必须两位数" }
+	     ]
+	   }  
+	"""
 	When 我完成:
 	    | name    | status | date       |
 		| Task123 | DONE   | 2014-05-26 |
