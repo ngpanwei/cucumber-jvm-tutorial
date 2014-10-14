@@ -21,4 +21,10 @@
 			<zipfileset dir="lib" />
 		</jar>
     </target>
+	<target name="run-test" description="run the tests">
+		<junit haltonfailure="true" printsummary="true">
+		  	<classpath refid="classpath" />
+		    <test name="ngpanwei.bdd.tests.FeatureTest"/>
+		</junit>		
+	</target>
 </project>
