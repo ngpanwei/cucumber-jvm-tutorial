@@ -62,7 +62,7 @@ public class BacklogStepDefs extends BaseUIStepDefs {
 	}
 
 	@Given("^团队有任务 \"([^\"]*)\"$")
-	public void 团队有任务(String taskName) throws Throwable {
+	public void teamGivenTask(String taskName) throws Throwable {
 		driver.findElement(By.name("taskName")).clear();
 		driver.findElement(By.name("taskName")).sendKeys(taskName);
 		driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
@@ -70,7 +70,7 @@ public class BacklogStepDefs extends BaseUIStepDefs {
 	}
 
 	@When("^团队完成 \"([^\"]*)\"$")
-	public void 团队完成(String taskName) throws Throwable {
+	public void teamCompleteTask(String taskName) throws Throwable {
 		// Express the Regexp above with the code you wish you had
 		// throw new PendingException();
 	}

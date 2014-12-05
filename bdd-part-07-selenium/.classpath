@@ -41,7 +41,6 @@
 	<classpathentry kind="lib" path="lib/share/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/share/xercesImpl-2.10.0.jar"/>
 	<classpathentry kind="lib" path="lib/share/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="lib/selenium/selenium-java-2.40.0.jar"/>
 	<classpathentry kind="lib" path="lib/jetty/jetty-server-9.1.3.v20140225.jar" sourcepath="/Users/ngpanwei/.m2/repository/org/eclipse/jetty/jetty-server/9.1.3.v20140225/jetty-server-9.1.3.v20140225-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jetty/jetty-util-9.1.3.v20140225.jar"/>
 	<classpathentry kind="lib" path="lib/jetty/jetty-servlet-9.1.3.v20140225.jar"/>
@@ -67,16 +66,6 @@
 	<classpathentry kind="lib" path="lib/tdd/objenesis-2.1.jar"/>
 	<classpathentry kind="lib" path="lib/tdd/powermock-easymock-1.5.4-full.jar"/>
 	<classpathentry kind="lib" path="lib/tdd/easymock-3.2.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-core-1.1.5.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-html-0.2.3.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-java-1.1.5.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-junit-1.1.5.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-jvm-deps-1.0.3.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/gherkin-2.12.1.jar" sourcepath="/Users/ngpanwei/.m2/repository/info/cukes/gherkin/2.12.1/gherkin-2.12.1-sources.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/picocontainer-2.14.3.jar"/>
-	<classpathentry kind="lib" path="lib/cucumber115/cucumber-spring-1.1.5.jar"/>
 	<classpathentry kind="lib" path="lib/spring/aopalliance-1.0.jar"/>
 	<classpathentry kind="lib" path="lib/spring/commons-logging-1.1.3.jar"/>
 	<classpathentry kind="lib" path="lib/spring/javax.inject-1.jar"/>
@@ -86,5 +75,17 @@
 	<classpathentry kind="lib" path="lib/spring/spring-core-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring/spring-expression-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring/spring-test-4.0.3.RELEASE.jar" sourcepath="/Users/ngpanwei/.m2/repository/org/springframework/spring-test/4.0.3.RELEASE/spring-test-4.0.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium/selenium-java-2.43.1.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/cucumber-core-1.1.8.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/cucumber-html-0.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/cucumber-java-1.1.8.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/cucumber-junit-1.1.8.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/cucumber-jvm-deps-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/jCukeTool.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/org.xmind.core_3.4.1.201401221918.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber/picocontainer-2.14.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
