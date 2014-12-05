@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="cuke-skeleton" default="packaging" basedir=".">
+<project name="bdd-part-05-elaborate" default="packaging" basedir=".">
 	<description>
     format feature files
   </description>
@@ -14,7 +14,7 @@
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
 	<target name="packaging" description="packaging cucumber example">
-		<jar destfile="cucumber-initial.zip" description="Packing project">
+		<jar destfile="bdd-part-05-elaborate.zip" description="Packing project">
 			<zipfileset dir="requirements" />
 			<zipfileset dir="src" />
 			<zipfileset dir="test" />

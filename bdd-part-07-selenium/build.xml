@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="jEssence" default="runcukes" basedir=".">
+<project name="bdd-part-07-selenium" default="runcukes" basedir=".">
 	<description>
     jEssence build file.  This is used to package the project as a zip.
   </description>
@@ -74,4 +74,12 @@
 		</fail>
 -->
 	</target>
+	<target name="packaging" description="packaging cucumber example">
+		<jar destfile="bdd-part-07-selenium.zip" description="Packing project">
+			<zipfileset dir="requirements" />
+			<zipfileset dir="src" />
+			<zipfileset dir="test" />
+			<zipfileset dir="lib" />
+		</jar>
+    </target>	
 </project>

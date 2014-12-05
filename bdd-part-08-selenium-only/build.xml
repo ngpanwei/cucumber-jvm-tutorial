@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="bdd-part-08-selenium-only" default="packaging" basedir=".">
+	<description>
+    format feature files
+  </description>
+	<property name="src.dir" value="src" />
+	<property name="test.dir" value="test" />
+	<property name="lib.dir" value="lib" />
+	<property name="bin.dir" value="bin" />
+	<path id="classpath">
+		<pathelement path="${src.dir}" />
+		<pathelement path="${test.dir}" />
+		<pathelement path="${bin.dir}" />
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+	<target name="packaging" description="packaging cucumber example">
+		<jar destfile="bdd-part-08-selenium-only.zip" description="Packing project">
+			<zipfileset dir="test" />
+			<zipfileset dir="lib" />
+		</jar>
+    </target>
+</project>

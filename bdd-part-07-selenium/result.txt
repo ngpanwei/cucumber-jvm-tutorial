@@ -1,0 +1,13 @@
+Testsuite: ngpanwei.tests.unit.UnitTests
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+
+	Caused an ERROR
+ngpanwei.tests.unit.UnitTests
+java.lang.ClassNotFoundException: ngpanwei.tests.unit.UnitTests
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.parseBuildFile(InternalAntRunner.java:192)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:401)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+
