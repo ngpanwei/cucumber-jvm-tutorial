@@ -32,8 +32,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ FeatureTest.class ,
-	JsonFormatting.class})
+@SuiteClasses({ FeatureTest.class})
 public class AllTest {
 	public static void main(String args[]) {
 		Result result = JUnitCore.runClasses(AllTest.class); 
