@@ -20,5 +20,16 @@
 			<zipfileset dir="test" />
 			<zipfileset dir="lib" />
 		</jar>
-    </target>
+	</target>
+	<target name="running" description="running cucumber example">
+		<junit>
+			<formatter type="xml"/>
+			<classpath refid="classpath" />
+			<batchtest fork="yes" todir="results/all">
+				<fileset dir="${test.dir}">
+					<include name="**/AllTest*.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
 </project>

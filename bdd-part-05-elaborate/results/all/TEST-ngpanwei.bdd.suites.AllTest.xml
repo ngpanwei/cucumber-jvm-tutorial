@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="2" hostname="I" name="ngpanwei.bdd.suites.AllTest" tests="9" time="0.354" timestamp="2014-12-13T04:22:24">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/Users/ngpanwei/eclipse-kepler/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates//" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/classes" />
+    <property name="user.country.format" value="SG" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030" />
+    <property name="java.runtime.version" value="1.7.0_25-b15" />
+    <property name="user.name" value="ngpanwei" />
+    <property name="user.language" value="en" />
+    <property name="ant.file.type.bdd-part-05-elaborate" value="file" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="packaging" />
+    <property name="ant.project.name" value="bdd-part-05-elaborate" />
+    <property name="java.version" value="1.7.0_25" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="US-ASCII" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/build.xml" />
+    <property name="os.version" value="10.10" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="23.25-b01" />
+    <property name="ant.library.dir" value="/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="eclipse.pdebuild.scripts" value="/Users/ngpanwei/eclipse-kepler/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts//" />
+    <property name="user.home" value="/Users/ngpanwei" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test.dir" value="test" />
+    <property name="java.library.path" value="/Users/ngpanwei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="bin.dir" value="bin" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ngpanwei.bdd.suites.AllTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/results/all/TEST-ngpanwei.bdd.suites.AllTest.xml crashfile=/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/junitvmwatcher210601280885355417.properties propsfile=/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/junit2670187163646919461.properties" />
+    <property name="java.class.path" value="/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/src:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/test:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/bin:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber-report/original_cucumber-reporting-0.0.23.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-core-1.1.8.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-html-0.2.3.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-java-1.1.8.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-junit-1.1.8.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-jvm-deps-1.0.3.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/cucumber-picocontainer-1.1.8.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/gherkin-2.12.2.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/hamcrest-core-1.3.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/jCukeTool.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/junit-4.11.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/org.xmind.core_3.4.1.201401221918.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/cucumber/picocontainer-2.14.3.jar:/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/lib/json/json-simple-1.1.1.jar:/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib/ant-launcher.jar:/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib/ant.jar:/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib/ant-junit.jar:/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="eclipse.pdebuild.home" value="/Users/ngpanwei/eclipse-kepler/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/.//" />
+    <property name="java.io.tmpdir" value="/var/folders/h1/7gddtp8971xc7mk23pmxr7_c0000gp/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Users/ngpanwei/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="/Users/ngpanwei/eclipse-kepler/plugins/org.apache.ant_1.8.4.v201303080030/lib/ant.jar" />
+    <property name="file.encoding" value="US-ASCII" />
+    <property name="ant.file.bdd-part-05-elaborate" value="/Users/ngpanwei/git/cucumber-jvm-tutorial/bdd-part-05-elaborate/build.xml" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.invoked-targets" value="running" />
+  </properties>
+  <testcase classname="Scenario: 有未完成任务" name="Given Sprint 开始日期是 2014-05-23" time="0.001" />
+  <testcase classname="Scenario: 有未完成任务" name="Given Backlog 有 任务:" time="0.0" />
+  <testcase classname="Scenario: 有未完成任务" name="And 任务的内容是" time="0.003">
+    <failure message="expected null, but was:&lt;{&quot;detail&quot;:&quot;作为消费者，我要快速商品计算总价&quot;,&quot;comments&quot;:[{&quot;line&quot;:&quot;应该可选不同货币&quot;},{&quot;line&quot;:&quot;总价必须两位数&quot;}]}&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected null, but was:&lt;{&quot;detail&quot;:&quot;作为消费者，我要快速商品计算总价&quot;,&quot;comments&quot;:[{&quot;line&quot;:&quot;应该可选不同货币&quot;},{&quot;line&quot;:&quot;总价必须两位数&quot;}]}&gt;
+	at ngpanwei.bdd.stepdefs.BacklogStepDefs.任务_的内容是(BacklogStepDefs.java:72)
+	at ✽.And 任务的内容是(BacklogManagement.feature:40)
+</failure>
+  </testcase>
+  <testcase classname="junit.framework.TestSuite" name="Scenario: 有未完成任务" time="0.0">
+    <failure message="expected null, but was:&lt;{&quot;detail&quot;:&quot;作为消费者，我要快速商品计算总价&quot;,&quot;comments&quot;:[{&quot;line&quot;:&quot;应该可选不同货币&quot;},{&quot;line&quot;:&quot;总价必须两位数&quot;}]}&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected null, but was:&lt;{&quot;detail&quot;:&quot;作为消费者，我要快速商品计算总价&quot;,&quot;comments&quot;:[{&quot;line&quot;:&quot;应该可选不同货币&quot;},{&quot;line&quot;:&quot;总价必须两位数&quot;}]}&gt;
+	at ngpanwei.bdd.stepdefs.BacklogStepDefs.任务_的内容是(BacklogStepDefs.java:72)
+	at ✽.And 任务的内容是(BacklogManagement.feature:40)
+</failure>
+  </testcase>
+  <testcase classname="junit.framework.TestSuite" name="Scenario: 有未完成任务" time="0.0" />
+  <testcase classname="ngpanwei.bdd.suites.JsonFormatting" name="generateHtmlReportFromJson" time="0.004">
+    <error message="org/apache/velocity/context/Context" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/apache/velocity/context/Context
+	at ngpanwei.bdd.suites.JsonFormatting.generateHtmlReportFromJson(JsonFormatting.java:24)
+Caused by: java.lang.ClassNotFoundException: org.apache.velocity.context.Context
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+</error>
+  </testcase>
+  <system-out><![CDATA[
+1 Scenarios (1 failed)
+5 Steps (1 failed, 2 skipped, 2 passed)
+0m0.142s
+
+java.lang.AssertionError: expected null, but was:<{"detail":"????????????????","comments":[{"line":"????????"},{"line":"???????"}]}>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotNull(Assert.java:664)
+	at org.junit.Assert.assertNull(Assert.java:646)
+	at org.junit.Assert.assertNull(Assert.java:656)
+	at ngpanwei.bdd.stepdefs.BacklogStepDefs.??_????(BacklogStepDefs.java:72)
+	at ?.And ??????(BacklogManagement.feature:40)
+
+]]></system-out>
+  <system-err><![CDATA[Sprint Start Date : 2014-05-23
+New Task Task123
+New Task TaskAB
+????????????????
+]]></system-err>
+</testsuite>

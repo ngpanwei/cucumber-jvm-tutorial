@@ -24,5 +24,6 @@
 	<classpathentry kind="lib" path="lib/cucumber/cucumber-java-1.1.8.jar"/>
 	<classpathentry kind="lib" path="lib/cucumber/cucumber-junit-1.1.8.jar"/>
 	<classpathentry kind="lib" path="lib/cucumber/cucumber-spring-1.1.8.jar"/>
+	<classpathentry kind="lib" path="lib/cucumber-report/original_cucumber-reporting-0.0.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

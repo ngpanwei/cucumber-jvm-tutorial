@@ -25,6 +25,7 @@ package ngpanwei.bdd.stepdefs;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.Date;
 import java.util.List;
@@ -68,6 +69,7 @@ public class BacklogStepDefs {
 	public void 任务_的内容是(String taskDetailDef) throws Throwable {
 		JSONObject taskDetail = (JSONObject)JSONValue.parse(taskDetailDef) ;
 		System.err.println((String)taskDetail.get("detail")) ;
+		assertNull(taskDetail) ;
 	}
 	
 	@When("^我完成:$")

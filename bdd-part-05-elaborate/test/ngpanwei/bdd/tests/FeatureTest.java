@@ -31,6 +31,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		monochrome = true, 
+		format = { "html:results/html/feature-test.html" ,
+		   		   "junit:results/xml/feature-test.xml" ,
+				   "json:results/json/feature-test.json" } ,
 		features = "requirements/features" ,
 		glue = "ngpanwei.bdd.stepdefs" ,
 		tags = { "~@Undefined"  } 

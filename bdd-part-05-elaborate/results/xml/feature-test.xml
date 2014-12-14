@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="3" time="0.204463">
+<testcase classname="管理任务" name="有未完成任务" time="0.202992">
+<failure message="java.lang.AssertionError: expected null, but was:&lt;{&quot;detail&quot;:&quot;作为消费者，我要快速商品计算总价&quot;,&quot;comments&quot;:[{&quot;line&quot;:&quot;应该可选不同货币&quot;},{&quot;line&quot;:&quot;总价必须两位数&quot;}]}&gt;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.failNotNull(Assert.java:664)&#10;&#9;at org.junit.Assert.assertNull(Assert.java:646)&#10;&#9;at org.junit.Assert.assertNull(Assert.java:656)&#10;&#9;at ngpanwei.bdd.stepdefs.BacklogStepDefs.任务_的内容是(BacklogStepDefs.java:72)&#10;&#9;at ✽.And 任务的内容是(BacklogManagement.feature:40)&#10;"><![CDATA[Given Sprint 开始日期是 2014-05-23...............................................passed
+Given Backlog 有 任务:.........................................................passed
+And 任务的内容是..................................................................failed
+When 我完成:...................................................................skipped
+Then 未完成任务是:................................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected null, but was:<{"detail":"作为消费者，我要快速商品计算总价","comments":[{"line":"应该可选不同货币"},{"line":"总价必须两位数"}]}>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotNull(Assert.java:664)
+	at org.junit.Assert.assertNull(Assert.java:646)
+	at org.junit.Assert.assertNull(Assert.java:656)
+	at ngpanwei.bdd.stepdefs.BacklogStepDefs.任务_的内容是(BacklogStepDefs.java:72)
+	at ✽.And 任务的内容是(BacklogManagement.feature:40)
+]]></failure>
+</testcase>
+<testcase classname="任务报告" name="生成任务报告" time="0.001391">
+<skipped><![CDATA[Given Sprint 开始日期是 2014-05-23...............................................passed
+Given Backlog 有 任务:.........................................................passed
+Then 建立报告 "总结报告" 有 "2" 任务...................................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="任务报告" name="生成未完成任务报告" time="0.00008">
+<system-out/>
+</testcase>
+</testsuite>

@@ -25,11 +25,17 @@ package ngpanwei.bdd.suites;
 
 import ngpanwei.bdd.tests.FeatureTest;
 
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ FeatureTest.class })
+@SuiteClasses({ FeatureTest.class ,
+	JsonFormatting.class})
 public class AllTest {
+	public static void main(String args[]) {
+		Result result = JUnitCore.runClasses(AllTest.class); 
+	}
 }
